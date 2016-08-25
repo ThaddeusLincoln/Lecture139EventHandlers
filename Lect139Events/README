@@ -36,4 +36,17 @@ Annotations in EventHandler or EventListeners
 @FXML
 public void onButtonClicked(){...}
 
-are not mandatory but are helpfull, kinda like a comment.
+are not mandatory but are helpful, kinda like a comment.
+
+ActionEvent e as parameter in public void onButtonClicked(ActionEvent e){....} provides information
+about the control that caused the actions, and that information can be uses inside the hanler/listener
+
+NOTE : we can handle several controls with the same EventHandler
+
+Preventing users from making mistakes in the first place, will result in a better user experience.
+
+Adding an initialize method to our, which will be called by JavaFX runtime when it's initializing the UI,
+we can preset controls. This method can't have any parameters, must be public and must have the @FXML
+annotation.  
+
+ 
