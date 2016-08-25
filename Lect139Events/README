@@ -1,0 +1,39 @@
+Procedural driver program VS Event Driven program.
+
+Console programs, or any without a user interface are PROCEDURE DRIVEN, 
+which means that they run from the entry point of the application to the last line of code. 
+Even the existence of conditional blocks, they are supposed to follow an order.
+
+UI applications are EVENT DRIVEN, that's because the users actions dictates what code will be run and when.
+
+Typically the life cycle of a UI is as follows:
+1. It'll run the initialization code
+2. It'll then build the main user interface
+3. And then it'll wait for user input
+
+4. When the user takes one action, the application will run the code that handles that particular event
+5. When the user closes the main window, or indicates some other way that they'd like to close the application, 
+then a cleanup code will run and the application will then exit at that point. 
+
+In JavaFx the "JavaFx application thread" or "UI Thread" waits for user input
+
+Controller.java : is the part of the application that handles user input.
+
+We've writen an EventHandler and associated it with out button, 
+when we click the button the UI thread to see if there's an EventHandler for that particular event.
+
+Another way of saying that an application is interested in handling our event 
+is saying that "it's listening for an event" and for that reason EventHandlers are sometimes 
+referred as EventListeners and we'll see that terminology in Android for instance. 
+
+@FXML
+private TextField nameField;
+
+indicates that this field will be associated to the element with the same name in the fxml.
+
+Annotations in EventHandler or EventListeners
+
+@FXML
+public void onButtonClicked(){...}
+
+are not mandatory but are helpfull, kinda like a comment.
